@@ -6,4 +6,7 @@ login_manager = LoginManager()
 
 @login_manager.user_loader
 def load_user(user_id):
-    return User.query.get(int(user_id))
+    user = User.query.filter_by(id=user_id).first()
+    if user:
+        return user
+    return None
