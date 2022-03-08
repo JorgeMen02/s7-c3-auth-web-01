@@ -6,7 +6,6 @@ app = Flask(__name__)
 
 # configurar flask alchemy
 app.config.from_object("config.BaseConfig")
-print(app.config)
 
 SQLAlchemy(app)
 
