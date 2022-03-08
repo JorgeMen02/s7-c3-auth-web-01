@@ -16,6 +16,7 @@ itsdangerous==2.1.0
 Jinja2==3.0.3
 MarkupSafe==2.1.0
 mypy-extensions==0.4.3
+mysqlclient==2.1.0
 pathspec==0.9.0
 platformdirs==2.5.1
 pycodestyle==2.8.0
