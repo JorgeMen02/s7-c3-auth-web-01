@@ -8,6 +8,7 @@
 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo pariatur sapiente aliquam maxime libero reiciendis
     soluta iste veritatis ipsam adipisci.</p>
 <br>
-<a href="#">go to login page</a>
-<a href="#">go to register page</a>
+<a href="{{ url_for('auth.login') }}">go to login page</a>
+<br>
+<a href="{{ url_for('auth.register') }}">go to register page</a>
 {% endblock %}
