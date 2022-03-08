@@ -1,4 +1,6 @@
 from flask import Blueprint, render_template
+from forms.registerForm import RegisterForm
+from forms.loginForm import LoginForm
 
 auth = Blueprint("auth", __name__)
 
@@ -8,14 +10,16 @@ def home():
     return render_template("home.html")
 
 
-@auth.route("/login")
+@auth.route("/login", methods=["GET", "POST"])
 def login():
-    return render_template("login.html")
+    form = LoginForm()
+    return render_template("login.html", form=form)
 
 
-@auth.route("/register")
+@auth.route("/register", methods=["GET", "POST"])
 def register():
-    return render_template("register.html")
+    form = RegisterForm()
+    return render_template("register.html", form=form)
 
 
 @auth.route("/dashboard")
