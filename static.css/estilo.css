@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Festive&family=Oswald:wght@200&family=Work+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Festive&family=Lobster&family=Oswald:wght@200&family=Ubuntu+Mono&family=Work+Sans:wght@100&display=swap');
+
+ *{
+  font-family: 'Oswald', sans-serif;
+}
+
+.head { 
+  background-color: rgb(129, 171, 250);
+  padding-top: 1px;
+  margin: -10px;
+  font-size: 150%;
+ 
+}
+.textohead{
+  font-family:'Lobster', 'cursive';
+}
+
+
+body {
+  background-color: rgb(255, 251, 251);
+}
+
+html{
+  font-size: 75%;
+}
+
+
+.botones {
+  justify-content: space-between;
+  font-size: 1.3rem;
+  color:rgb(236, 70, 70);
+  padding:1.5rem 7%;
+  font-weight: bold;
+  display: flex;
+  
+
+}
+.botones a{
+  text-decoration: none;
+  color: white;
+}
+
+.botones a:hover{
+  color:var(--main-color);
+  border-bottom: .1rem solid var(--main-color);
+  padding-bottom: .5rem;
+}
+
+input[type =text] {
+
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+ 
+}
+
+input[type =submit]{
+  width: 20%;
+  background-color: rgb(158, 247, 247);
+  color: black;
+  padding: 7px 00px;
+  margin: 8px 0;
+  border-radius: 4px;
+  
+}
+
+input[type =submit]:hover {
+ background-color: aqua;
+}
+
+label{
+  font-size: 15px;
+}
+
+img{
+  display:block;
+  margin:auto;
+  }
+
+
+.titulo{
+  font-size: 50px;
+}
+
+.caja{
+font-size: 18px; 
+font-weight: 400;
+background-color: rgb(209, 252, 252);
+padding: 20px 20px 20px 20px;
+margin: 0 0 25px;
+overflow: hidden;
+border-radius: 35px 0px 35px 0px;
+-moz-border-radius: 35px 0px 35px 0px;
+-webkit-border-radius: 35px 0px 35px 0px;
+border: 2px solid #5878ca;
+justify-content: center;
+}
+
+footer {
+  text-align: center;
+  margin: -10px;
+  padding: 3px;
+  background-color: rgb(129, 171, 250);
+  color: white;
+}
+
+.slider{
+  width: 95%;
+  margin:auto;
+  overflow: hidden;
+}
+
+.slider ul{
+  padding: 0;
+  display: flex;
+  width: 400%;
+
+  animation: cambio 20s infinite alternate;
+  
+}
+
+.slider li{
+  list-style: none;
+  width: 100%;
+}
+
+.slider img{
+  width: 100%;
+}
+
+@keyframes cambio{
+  0% {margin-left: 0; }
+  20% {margin-left: 0;}
+
+  25%{margin-left: -100%;}
+  45%{margin-left: -100%;}
+
+  50%{margin-left: -200%;}
+  70%{margin-left: -200%;}
+
+  75%{margin-left: -300%;}
+  100%{margin-left: -300%;}
+}
+
+
+
+
+

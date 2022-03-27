@@ -1,21 +1,15 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField
-from wtforms.validators import InputRequired, Length, ValidationError
-from models.auth.user import User
+from wtforms import StringField, SubmitField
+from wtforms.validators import InputRequired, Length
 
 
-class RegisterForm(FlaskForm):
-    username = StringField(
+class Messages(FlaskForm):
+    nombre_completo = StringField(
         validators=[InputRequired(), Length(min=4, max=20)],
-        render_kw={"placeholder": "username"},
+        render_kw={"placeholder": "Nombre completo"},
     )
-    password = PasswordField(
-        validators=[InputRequired(), Length(min=4, max=20)],
-        render_kw={"placeholder": "password"},
+    mensaje = StringField(
+        validators=[InputRequired(), Length(min=4, max=100)],
+        render_kw={"placeholder": "Mensaje"},
     )
     submit = SubmitField("register")
-
-    def validate_username(self, username):
-        current_user = User.query.filter_by(username=username.data).first()
-        if current_user:
-            raise ValidationError("the username already exists.")
